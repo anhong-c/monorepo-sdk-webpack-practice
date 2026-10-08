@@ -1,0 +1,40 @@
+{
+  "name": "@practice/sdk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./component-a": {
+      "source": "./src/modules/ui/component-a/label.ts",
+      "types": "./dist/component-a.d.ts",
+      "import": "./dist/component-a.js",
+      "require": "./dist/component-a.cjs",
+      "default": "./dist/component-a.js"
+    },
+    "./component-b": {
+      "source": "./src/modules/ui/component-b/summary.ts",
+      "types": "./dist/component-b.d.ts",
+      "import": "./dist/component-b.js",
+      "require": "./dist/component-b.cjs",
+      "default": "./dist/component-b.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "typecheck": "tsc -b tsconfig.reference.json"
+  },
+  "devDependencies": {
+    "tsup": "8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

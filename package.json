@@ -1,0 +1,18 @@
+{
+  "name": "monorepo-sdk-webpack-practice",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.27.0",
+  "scripts": {
+    "build": "pnpm --filter @practice/sdk build && pnpm --filter @practice/app build",
+    "build:sdk": "pnpm --filter @practice/sdk build",
+    "build:app": "pnpm --filter @practice/app build",
+    "test": "pnpm --filter @practice/app test",
+    "typecheck": "tsc -b",
+    "typecheck:verbose": "tsc -b --verbose",
+    "start": "pnpm --filter @practice/app start"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

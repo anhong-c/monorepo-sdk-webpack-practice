@@ -1,0 +1,23 @@
+{
+  "name": "@practice/app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs",
+    "start": "node dist/app.cjs",
+    "test": "node --test plugins/my-alias-plugin.test.cjs tests/source-exports.test.cjs",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@practice/sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-typescript": "^7.27.1",
+    "babel-loader": "^10.1.1",
+    "typescript": "^5.9.3",
+    "webpack": "^5.110.1",
+    "webpack-cli": "^7.2.2"
+  }
+}
